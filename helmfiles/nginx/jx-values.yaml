@@ -20,38 +20,57 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: pluto
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "916718226324"
     kanikoFlags: --skip-unused-stages --snapshotMode=redo
+    project: corded-imagery-343815
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: binomy
+    repository: jx-pluto-gke-gsm
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: pluto.binomy.io
+    externalDNS: true
     kind: ingress
     namespaceSubDomain: -nginx.
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: tech@binomy.io
+      enabled: true
+      production: true
+  kuberhealthy: true
+  pipelineUser:
+    username: binomytech
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-pluto-f823e619bd53
+  - name: reports
+    url: gs://reports-pluto-f823e619bd53
+  - name: repository
+    url: gs://repository-pluto-f823e619bd53
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
-  enabled: false
+  enabled: true
 jxRequirementsIngressTLS:
-  enabled: false
+  enabled: true
 jxRequirementsKuberhealthy:
-  enabled: false
+  enabled: true
 jxRequirementsTLSCheck:
-  enabled: false
+  enabled: true
 jxRequirementsVault:
   enabled: false
