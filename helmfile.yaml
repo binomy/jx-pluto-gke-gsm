@@ -8,5 +8,9 @@ helmfiles:
 - path: helmfiles/nginx/helmfile.yaml
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
+releases:
+- chart: ./charts/origins
+  name: origins-cms
+  namespace: jx
 templates: {}
 renderedvalues: {}
