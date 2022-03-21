@@ -1,0 +1,26 @@
+# Source: origins-cms/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'origins-cms'
+  name: origins-cms
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: origins-cms
+                port:
+                  number: 3005
+      host: origins-cms-jx-production.pluto.binomy.io
+  tls:
+    - hosts:
+        - origins-cms-jx-production.pluto.binomy.io
+      secretName: "tls-pluto-binomy-io-p"

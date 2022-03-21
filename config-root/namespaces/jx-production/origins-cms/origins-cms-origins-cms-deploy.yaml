@@ -1,0 +1,70 @@
+# Source: origins-cms/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: origins-cms-origins-cms
+  labels:
+    draft: draft-app
+    chart: "origins-cms-0.0.11"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'origins-cms'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx-production
+spec:
+  selector:
+    matchLabels:
+      app: origins-cms-origins-cms
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: origins-cms-origins-cms
+    spec:
+      serviceAccountName: origins-cms-origins-cms
+      containers:
+        - name: origins-cms
+          image: "gcr.io/corded-imagery-343815/origins-cms:0.0.11"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: SESSION_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: SESSION_SECRET
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: DATABASE_URL
+            - name: VERSION
+              value: 0.0.11
+          envFrom: null
+          ports:
+            - name: http
+              containerPort: 3005
+          livenessProbe:
+            httpGet:
+              path: /_healthcheck
+              port: 3005
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /_healthcheck
+              port: 3005
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
