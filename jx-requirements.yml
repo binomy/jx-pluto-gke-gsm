@@ -34,7 +34,7 @@ spec:
         email: tech@binomy.io
         enabled: true
         production: true
-        secretName: tls-pluto-binomy-io-p
+        secretName: tls-binomy-io-p
     key: staging
   - ingress:
       domain: binomy.io
@@ -44,7 +44,7 @@ spec:
         email: tech@binomy.io
         enabled: true
         production: true
-        secretName: tls-pluto-binomy-io-p
+        secretName: tls-binomy-io-p
     key: production
   ingress:
     domain: pluto.binomy.io
