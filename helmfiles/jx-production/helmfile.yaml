@@ -21,7 +21,7 @@ releases:
   values:
   - jx-values.yaml
 - chart: jxgh/acme
-  version: 0.0.19
+  version: 0.0.24
   condition: jxRequirementsIngressTLS.enabled
   name: acme-jx
   namespace: jx-production
