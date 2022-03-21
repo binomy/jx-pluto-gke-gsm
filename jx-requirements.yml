@@ -27,7 +27,7 @@ spec:
   - key: staging
   - key: production
   - ingress:
-      domain: origins-cms-staging.binomy.io
+      domain: staging.binomy.io
       externalDNS: true
       tls:
         email: tech@binomy.io
@@ -36,7 +36,7 @@ spec:
         secretName: tls-pluto-binomy-io-p
     key: staging
   - ingress:
-      domain: origins-cms.binomy.io
+      domain: binomy.io
       externalDNS: true
       tls:
         email: tech@binomy.io
