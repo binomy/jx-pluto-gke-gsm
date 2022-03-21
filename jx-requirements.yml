@@ -26,11 +26,29 @@ spec:
     repository: jx-pluto-gke-gsm
   - key: staging
   - key: production
+  - ingress:
+      domain: origins-cms-staging.binomy.io
+      externalDNS: true
+      tls:
+        email: tech@binomy.io
+        enabled: true
+        production: true
+        secretName: tls-pluto-binomy-io-p
+    key: staging
+  - ingress:
+      domain: origins-cms.binomy.io
+      externalDNS: true
+      tls:
+        email: tech@binomy.io
+        enabled: true
+        production: true
+        secretName: tls-pluto-binomy-io-p
+    key: production
   ingress:
     domain: pluto.binomy.io
     externalDNS: true
     kind: ingress
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: .
     tls:
       email: tech@binomy.io
       enabled: true
