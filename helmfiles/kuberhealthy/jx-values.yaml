@@ -49,7 +49,7 @@ jxRequirements:
         email: tech@binomy.io
         enabled: true
         production: true
-        secretName: tls-binomy-io-p
+        secretName: tls-staging-binomy-io-p
     key: staging
   - ingress:
       domain: binomy.io

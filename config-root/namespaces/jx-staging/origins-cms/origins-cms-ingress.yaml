@@ -23,4 +23,4 @@ spec:
   tls:
     - hosts:
         - origins-cms.staging.binomy.io
-      secretName: "tls-binomy-io-p"
+      secretName: "tls-staging-binomy-io-p"
