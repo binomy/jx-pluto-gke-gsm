@@ -18,5 +18,7 @@ releases:
   version: 0.0.11
   name: origins-cms
   namespace: jx-production
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

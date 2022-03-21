@@ -40,6 +40,18 @@
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx-production/jx-verify
+  - apiVersion: v1
+    appVersion: 0.0.11
+    description: A Helm chart for Kubernetes
+    firstDeployed: "2022-03-21T02:47:38Z"
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    lastDeployed: "2022-03-21T02:47:38Z"
+    logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-production%2Fcontainer_name%2Forigins-cms&dateRangeUnbound=both
+    name: origins-cms
+    repositoryName: dev
+    repositoryUrl: https://chartmuseum-jx.pluto.binomy.io
+    resourcePath: config-root/namespaces/jx-production/origins-cms
+    version: 0.0.11
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml
   releases:
