@@ -1,0 +1,20 @@
+# Source: origins-cms/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: origins-cms
+  labels:
+    chart: "origins-cms-0.0.10"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'origins-cms'
+  namespace: jx-staging
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3005
+      targetPort: 3005
+      protocol: TCP
+      name: http
+  selector:
+    app: origins-cms-origins-cms
