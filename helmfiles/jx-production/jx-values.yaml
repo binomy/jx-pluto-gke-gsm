@@ -49,7 +49,7 @@ jxRequirements:
         email: tech@binomy.io
         enabled: true
         production: true
-        secretName: tls-pluto-binomy-io-p
+        secretName: tls-binomy-io-p
     key: staging
   - ingress:
       domain: binomy.io
@@ -59,7 +59,7 @@ jxRequirements:
         email: tech@binomy.io
         enabled: true
         production: true
-        secretName: tls-pluto-binomy-io-p
+        secretName: tls-binomy-io-p
     key: production
   ingress:
     domain: binomy.io
@@ -69,7 +69,7 @@ jxRequirements:
       email: tech@binomy.io
       enabled: true
       production: true
-      secretName: tls-pluto-binomy-io-p
+      secretName: tls-binomy-io-p
   kuberhealthy: true
   pipelineUser:
     username: binomytech
