@@ -7,7 +7,7 @@ repositories:
 - name: jxgh
   url: https://jenkins-x-charts.github.io/repo
 - name: dev
-  url: https://chartmuseum-jx.pluto.binomy.io
+  url: https://chartmuseum.pluto.binomy.io
 releases:
 - chart: jxgh/jx-verify
   name: jx-verify
