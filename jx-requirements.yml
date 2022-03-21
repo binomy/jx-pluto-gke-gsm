@@ -29,6 +29,7 @@ spec:
   - ingress:
       domain: staging.binomy.io
       externalDNS: true
+      namespaceSubDomain: ""
       tls:
         email: tech@binomy.io
         enabled: true
@@ -38,6 +39,7 @@ spec:
   - ingress:
       domain: binomy.io
       externalDNS: true
+      namespaceSubDomain: ""
       tls:
         email: tech@binomy.io
         enabled: true

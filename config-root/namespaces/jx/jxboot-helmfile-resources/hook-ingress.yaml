@@ -20,8 +20,8 @@ spec:
                 port:
                   number: 80
             path: "/hook"
-      host: hook-jx.pluto.binomy.io
+      host: hook.pluto.binomy.io
   tls:
     - hosts:
-        - hook-jx.pluto.binomy.io
+        - hook.pluto.binomy.io
       secretName: "tls-pluto-binomy-io-p"

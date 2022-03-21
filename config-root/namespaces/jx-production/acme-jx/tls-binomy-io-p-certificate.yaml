@@ -1,0 +1,20 @@
+# Source: acme/templates/cert-manager-prod-certificate.yaml
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: "tls-binomy-io-p"
+  labels:
+    jenkins.io/letsencrypt-service: production
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'acme-jx'
+  namespace: jx-production
+spec:
+  secretName: "tls-binomy-io-p"
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: "*.binomy.io"
+  dnsNames:
+    - "*.binomy.io"
+    - "binomy.io"

@@ -20,7 +20,7 @@ spec:
     metadata:
       labels:
         app: lighthouse-tekton-controller
-      annotations: {jenkins-x.io/hash: '016e9e38da1e6234a0bdb672e256c2331d20b7c06052838801516bf961c2d423'}
+      annotations: {jenkins-x.io/hash: '6ed00e8b8af89b6a00c803a6b987a4e13148e8726dab937e81acfbf1c3117715'}
     spec:
       serviceAccountName: lighthouse-tekton-controller
       containers:
@@ -29,7 +29,7 @@ spec:
           imagePullPolicy: IfNotPresent
           args:
             - --namespace=jx
-            - --dashboard-url=http://dashboard-jx.pluto.binomy.io
+            - --dashboard-url=http://dashboard.pluto.binomy.io
             - --dashboard-template=namespaces/{{ .Namespace }}/pipelineruns/{{ .PipelineRun }}
           ports:
             - name: metrics

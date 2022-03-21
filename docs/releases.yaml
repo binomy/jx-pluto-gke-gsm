@@ -52,6 +52,17 @@
     repositoryUrl: https://chartmuseum-jx.pluto.binomy.io
     resourcePath: config-root/namespaces/jx-production/origins-cms
     version: 0.0.11
+  - apiVersion: v1
+    appVersion: 0.0.24
+    description: Acme
+    firstDeployed: "2022-03-21T09:13:12Z"
+    icon: https://avatars2.githubusercontent.com/u/35583233?s=200&v=4
+    lastDeployed: "2022-03-21T09:13:12Z"
+    logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-production%2Fcontainer_name%2Facme&dateRangeUnbound=both
+    name: acme
+    repositoryName: jxgh
+    repositoryUrl: https://jenkins-x-charts.github.io/repo
+    version: 0.0.24
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml
   releases:
@@ -80,6 +91,17 @@
     repositoryUrl: https://chartmuseum-jx.pluto.binomy.io
     resourcePath: config-root/namespaces/jx-staging/origins-cms
     version: 0.0.11
+  - apiVersion: v1
+    appVersion: 0.0.24
+    description: Acme
+    firstDeployed: "2022-03-21T09:13:21Z"
+    icon: https://avatars2.githubusercontent.com/u/35583233?s=200&v=4
+    lastDeployed: "2022-03-21T09:13:21Z"
+    logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Facme&dateRangeUnbound=both
+    name: acme
+    repositoryName: jxgh
+    repositoryUrl: https://jenkins-x-charts.github.io/repo
+    version: 0.0.24
 - namespace: jx
   path: helmfiles/jx/helmfile.yaml
   releases:

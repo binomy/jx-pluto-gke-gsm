@@ -58,6 +58,8 @@ spec:
             - --log-level=info
             - --log-format=text
             - --domain-filter=pluto.binomy.io
+            - --domain-filter=staging.binomy.io
+            - --domain-filter=binomy.io
             - --policy=sync
             - --provider=google
             - --registry=txt

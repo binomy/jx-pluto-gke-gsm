@@ -36,6 +36,12 @@
 	      <td></td>
 	    </tr>
     <tr>
+	      <td><a href='' title='Acme'> <img src='https://avatars2.githubusercontent.com/u/35583233?s=200&v=4' width='24px' height='24px'> acme </a></td>
+	      <td>0.0.24</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>jx-staging</h3></td>
 		    </tr>
 	    <tr>
@@ -47,6 +53,12 @@
     <tr>
 	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> origins-cms </a></td>
 	      <td>0.0.11</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
+	      <td><a href='' title='Acme'> <img src='https://avatars2.githubusercontent.com/u/35583233?s=200&v=4' width='24px' height='24px'> acme </a></td>
+	      <td>0.0.24</td>
 	      <td></td>
 	      <td></td>
 	    </tr>

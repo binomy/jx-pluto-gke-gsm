@@ -28,5 +28,6 @@ releases:
   values:
   - jx-values.yaml
   - acme-values.yaml
+  - ../../versionStream/charts/jxgh/acme-jx/values.yaml.gotmpl
 templates: {}
 renderedvalues: {}

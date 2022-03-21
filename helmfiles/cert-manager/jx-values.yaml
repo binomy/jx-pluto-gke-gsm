@@ -41,11 +41,31 @@ jxRequirements:
     repository: jx-pluto-gke-gsm
   - key: staging
   - key: production
+  - ingress:
+      domain: staging.binomy.io
+      externalDNS: true
+      namespaceSubDomain: ""
+      tls:
+        email: tech@binomy.io
+        enabled: true
+        production: true
+        secretName: tls-pluto-binomy-io-p
+    key: staging
+  - ingress:
+      domain: binomy.io
+      externalDNS: true
+      namespaceSubDomain: ""
+      tls:
+        email: tech@binomy.io
+        enabled: true
+        production: true
+        secretName: tls-pluto-binomy-io-p
+    key: production
   ingress:
     domain: pluto.binomy.io
     externalDNS: true
     kind: ingress
-    namespaceSubDomain: -cert-manager.
+    namespaceSubDomain: .
     tls:
       email: tech@binomy.io
       enabled: true

@@ -45,7 +45,7 @@ data:
         repos:
         - binomy/jx-pluto-gke-gsm
         - binomy/origins-cms
-      target_url: http://lighthouse-jx.pluto.binomy.io/merge/status
+      target_url: http://lighthouse.pluto.binomy.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

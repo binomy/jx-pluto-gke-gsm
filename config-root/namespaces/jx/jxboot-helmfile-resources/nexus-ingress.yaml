@@ -19,8 +19,8 @@ spec:
                 name: nexus
                 port:
                   number: 80
-      host: nexus-jx.pluto.binomy.io
+      host: nexus.pluto.binomy.io
   tls:
     - hosts:
-        - nexus-jx.pluto.binomy.io
+        - nexus.pluto.binomy.io
       secretName: "tls-pluto-binomy-io-p"

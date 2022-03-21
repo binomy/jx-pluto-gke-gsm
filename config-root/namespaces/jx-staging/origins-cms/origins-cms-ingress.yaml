@@ -19,8 +19,8 @@ spec:
                 name: origins-cms
                 port:
                   number: 3005
-      host: origins-cms-jx-staging.pluto.binomy.io
+      host: origins-cms.staging.binomy.io
   tls:
     - hosts:
-        - origins-cms-jx-staging.pluto.binomy.io
+        - origins-cms.staging.binomy.io
       secretName: "tls-pluto-binomy-io-p"

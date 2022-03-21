@@ -19,7 +19,7 @@ metadata:
   namespace: jx
 spec:
   rules:
-    - host: dashboard-jx.pluto.binomy.io
+    - host: dashboard.pluto.binomy.io
       http:
         paths:
           - pathType: ImplementationSpecific
@@ -31,4 +31,4 @@ spec:
   tls:
     - secretName: tls-pluto-binomy-io-p
       hosts:
-        - dashboard-jx.pluto.binomy.io
+        - dashboard.pluto.binomy.io

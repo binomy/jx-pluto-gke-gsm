@@ -19,8 +19,8 @@ spec:
                 name: jenkins-x-chartmuseum
                 port:
                   number: 8080
-      host: chartmuseum-jx.pluto.binomy.io
+      host: chartmuseum.pluto.binomy.io
   tls:
     - hosts:
-        - chartmuseum-jx.pluto.binomy.io
+        - chartmuseum.pluto.binomy.io
       secretName: "tls-pluto-binomy-io-p"
