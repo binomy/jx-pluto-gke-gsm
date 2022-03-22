@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: origins-cms
   labels:
-    chart: "origins-cms-0.0.11"
+    chart: "origins-cms-0.0.13"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'origins-cms'
