@@ -33,7 +33,5 @@ releases:
   version: 0.0.4
   name: stocks-ui
   namespace: jx-staging
-  values:
-  - jx-values.yaml
 templates: {}
 renderedvalues: {}
