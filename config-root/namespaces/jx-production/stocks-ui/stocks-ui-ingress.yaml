@@ -1,0 +1,26 @@
+# Source: stocks-ui/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'stocks-ui'
+  name: stocks-ui
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: stocks-ui
+                port:
+                  number: 80
+      host: stocks-ui.binomy.io
+  tls:
+    - hosts:
+        - stocks-ui.binomy.io
+      secretName: "tls-binomy-io-p"
