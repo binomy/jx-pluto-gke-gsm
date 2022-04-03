@@ -5,7 +5,7 @@ metadata:
   name: origins-cms-origins-cms
   labels:
     draft: draft-app
-    chart: "origins-cms-0.0.17"
+    chart: "origins-cms-0.0.18"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'origins-cms'
@@ -25,7 +25,7 @@ spec:
       serviceAccountName: origins-cms-origins-cms
       containers:
         - name: origins-cms
-          image: "gcr.io/corded-imagery-343815/origins-cms:0.0.17"
+          image: "gcr.io/corded-imagery-343815/origins-cms:0.0.18"
           imagePullPolicy: IfNotPresent
           env:
             - name: SESSION_SECRET
@@ -39,7 +39,7 @@ spec:
                   name: origins-cms-db-url
                   key: DATABASE_URL
             - name: VERSION
-              value: 0.0.17
+              value: 0.0.18
           envFrom: null
           ports:
             - name: http
