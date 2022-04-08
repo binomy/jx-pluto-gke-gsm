@@ -2,12 +2,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: jx-verify-gc-jobs-tijkm
+  name: jx-verify-gc-jobs-zynkf
   annotations:
     kapp.k14s.io/disable-wait: ""
     meta.helm.sh/release-name: 'jx-verify'
   labels:
-    app: jx-verify-gc-jobs-jf0z6
+    app: jx-verify-gc-jobs-ygvzx
     release: jx-verify
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-production
@@ -25,7 +25,7 @@ spec:
           env:
             - name: XDG_CONFIG_HOME
               value: /home
-          image: ghcr.io/jenkins-x/jx-verify:0.2.2
+          image: ghcr.io/jenkins-x/jx-verify:0.2.3
           imagePullPolicy: IfNotPresent
           name: job
       dnsPolicy: ClusterFirst
