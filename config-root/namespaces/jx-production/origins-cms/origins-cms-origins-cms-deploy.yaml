@@ -5,7 +5,7 @@ metadata:
   name: origins-cms-origins-cms
   labels:
     draft: draft-app
-    chart: "origins-cms-0.0.19"
+    chart: "origins-cms-0.0.20"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'origins-cms'
@@ -25,7 +25,7 @@ spec:
       serviceAccountName: origins-cms-origins-cms
       containers:
         - name: origins-cms
-          image: "gcr.io/corded-imagery-343815/origins-cms:0.0.19"
+          image: "gcr.io/corded-imagery-343815/origins-cms:0.0.20"
           imagePullPolicy: IfNotPresent
           env:
             - name: SESSION_SECRET
@@ -59,7 +59,7 @@ spec:
                   name: origins-cms-secrets
                   key: CLOUDINARY_API_FOLDER
             - name: VERSION
-              value: 0.0.19
+              value: 0.0.20
           envFrom: null
           ports:
             - name: http
