@@ -10,7 +10,7 @@ metadata:
   annotations:
     meta.helm.sh/release-name: 'stocks-ui'
     wave.pusher.com/update-on-config-change: 'true'
-  namespace: jx-staging
+  namespace: jx-production
 spec:
   selector:
     matchLabels:
