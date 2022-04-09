@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: stocks-ui
   labels:
-    chart: "stocks-ui-0.0.9"
+    chart: "stocks-ui-0.0.10"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'stocks-ui'
