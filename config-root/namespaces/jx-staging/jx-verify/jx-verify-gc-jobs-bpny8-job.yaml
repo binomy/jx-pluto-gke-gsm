@@ -2,15 +2,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: jx-verify-gc-jobs-ffhut
+  name: jx-verify-gc-jobs-bpny8
   annotations:
     kapp.k14s.io/disable-wait: ""
     meta.helm.sh/release-name: 'jx-verify'
   labels:
-    app: jx-verify-gc-jobs-a37ry
+    app: jx-verify-gc-jobs-ti7zx
     release: jx-verify
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  namespace: jx-production
+  namespace: jx-staging
 spec:
   backoffLimit: 1
   completions: 1
