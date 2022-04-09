@@ -39,8 +39,6 @@ jxRequirements:
   - key: dev
     owner: binomy
     repository: jx-pluto-gke-gsm
-  - key: staging
-  - key: production
   - ingress:
       domain: staging.binomy.io
       externalDNS: true
