@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
     meta.helm.sh/release-name: 'stocks-ui'
   name: stocks-ui
-  namespace: jx-staging
+  namespace: jx-production
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
@@ -19,8 +19,8 @@ spec:
                 name: stocks-ui
                 port:
                   number: 3002
-      host: stocks-ui.staging.binomy.io
+      host: stocks-ui.binomy.io
   tls:
     - hosts:
-        - stocks-ui.staging.binomy.io
-      secretName: "tls-staging-binomy-io-p"
+        - stocks-ui.binomy.io
+      secretName: "tls-binomy-io-p"
