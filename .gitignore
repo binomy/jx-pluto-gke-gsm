@@ -15,7 +15,7 @@
 # vendor/
 
 # IDE files
-.idea 
+.idea
 
 # you could check these files in if you wanted to; but they are generally temporary files used
 # to generate the config-root directories
@@ -26,3 +26,5 @@ build
 
 .terraform/
 .history/
+
+.vscode
