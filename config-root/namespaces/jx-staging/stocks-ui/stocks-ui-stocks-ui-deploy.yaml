@@ -5,7 +5,7 @@ metadata:
   name: stocks-ui-stocks-ui
   labels:
     draft: draft-app
-    chart: "stocks-ui-0.0.5"
+    chart: "stocks-ui-0.0.6"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'stocks-ui'
@@ -25,18 +25,18 @@ spec:
       serviceAccountName: stocks-ui-stocks-ui
       containers:
         - name: stocks-ui
-          image: "gcr.io/corded-imagery-343815/stocks-ui:0.0.5"
+          image: "gcr.io/corded-imagery-343815/stocks-ui:0.0.6"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.5
+              value: 0.0.6
           envFrom: null
           ports:
             - name: http
               containerPort: 8080
           livenessProbe:
             httpGet:
-              path: /
+              path: /_healthcheck
               port: 8080
             initialDelaySeconds: 60
             periodSeconds: 10
@@ -44,7 +44,7 @@ spec:
             timeoutSeconds: 1
           readinessProbe:
             httpGet:
-              path: /
+              path: /_healthcheck
               port: 8080
             periodSeconds: 10
             successThreshold: 1
