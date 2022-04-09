@@ -18,7 +18,7 @@ spec:
               service:
                 name: stocks-ui
                 port:
-                  number: 80
+                  number: 3002
       host: stocks-ui.staging.binomy.io
   tls:
     - hosts:

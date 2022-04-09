@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: stocks-ui
   labels:
-    chart: "stocks-ui-0.0.6"
+    chart: "stocks-ui-0.0.7"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'stocks-ui'
@@ -12,8 +12,8 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - port: 80
-      targetPort: 8080
+    - port: 3002
+      targetPort: 3002
       protocol: TCP
       name: http
   selector:
