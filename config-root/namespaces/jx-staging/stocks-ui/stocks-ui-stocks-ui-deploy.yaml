@@ -5,7 +5,7 @@ metadata:
   name: stocks-ui-stocks-ui
   labels:
     draft: draft-app
-    chart: "stocks-ui-0.0.8"
+    chart: "stocks-ui-0.0.9"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'stocks-ui'
@@ -25,13 +25,13 @@ spec:
       serviceAccountName: stocks-ui-stocks-ui
       containers:
         - name: stocks-ui
-          image: "gcr.io/corded-imagery-343815/stocks-ui:0.0.8"
+          image: "gcr.io/corded-imagery-343815/stocks-ui:0.0.9"
           imagePullPolicy: IfNotPresent
           env:
             - name: PORT
               value: 3002
             - name: VERSION
-              value: 0.0.8
+              value: 0.0.9
           envFrom: null
           ports:
             - name: http
