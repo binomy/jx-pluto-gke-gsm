@@ -1,0 +1,20 @@
+# Source: stocks-ui/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: stocks-ui
+  labels:
+    chart: "stocks-ui-0.0.9"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'stocks-ui'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3002
+      targetPort: 3002
+      protocol: TCP
+      name: http
+  selector:
+    app: stocks-ui-stocks-ui

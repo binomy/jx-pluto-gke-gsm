@@ -33,5 +33,7 @@ releases:
   version: 0.0.9
   name: stocks-ui
   namespace: jx-production
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
