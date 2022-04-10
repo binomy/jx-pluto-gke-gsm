@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: binomy
+    provider: github
+    repository: unocoins
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: binomy-unocoins
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/binomy/unocoins.git
+  org: binomy
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: unocoins
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/binomy/unocoins
