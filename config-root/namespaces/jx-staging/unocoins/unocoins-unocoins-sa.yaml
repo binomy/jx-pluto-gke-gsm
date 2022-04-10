@@ -1,0 +1,10 @@
+# Source: unocoins/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: unocoins-unocoins
+  annotations:
+    meta.helm.sh/release-name: 'unocoins'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'

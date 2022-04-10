@@ -39,5 +39,7 @@ releases:
   version: 0.0.1
   name: unocoins
   namespace: jx-staging
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
