@@ -9,7 +9,6 @@ data:
       enabled:
         binomy/jx-pluto-gke-gsm: true
         binomy/origins-cms: true
-        binomy/stocks-ui: true
         binomy/unocoins: true
     plank: {}
     pod_namespace: jx
@@ -24,7 +23,6 @@ data:
       merge_method:
         binomy/jx-pluto-gke-gsm: merge
         binomy/origins-cms: merge
-        binomy/stocks-ui: merge
         binomy/unocoins: merge
       queries:
       - labels:
@@ -38,7 +36,6 @@ data:
         repos:
         - binomy/jx-pluto-gke-gsm
         - binomy/origins-cms
-        - binomy/stocks-ui
         - binomy/unocoins
       - labels:
         - updatebot
@@ -51,7 +48,6 @@ data:
         repos:
         - binomy/jx-pluto-gke-gsm
         - binomy/origins-cms
-        - binomy/stocks-ui
         - binomy/unocoins
       target_url: http://lighthouse.pluto.binomy.io/merge/status
 kind: ConfigMap
