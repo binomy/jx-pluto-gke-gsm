@@ -9,7 +9,6 @@ spec:
     providerKind: github
     repositories:
     - name: origins-cms
-    - name: stocks-ui
     - name: unocoins
     scheduler: in-repo
   slack:
