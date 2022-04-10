@@ -1,0 +1,20 @@
+# Source: unocoins/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: unocoins
+  labels:
+    chart: "unocoins-0.0.5"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'unocoins'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3002
+      targetPort: 3002
+      protocol: TCP
+      name: http
+  selector:
+    app: unocoins-unocoins
