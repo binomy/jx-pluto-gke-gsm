@@ -5,7 +5,7 @@ metadata:
   name: unocoins-unocoins
   labels:
     draft: draft-app
-    chart: "unocoins-0.0.3"
+    chart: "unocoins-0.0.4"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'unocoins'
@@ -25,21 +25,21 @@ spec:
       serviceAccountName: unocoins-unocoins
       containers:
         - name: unocoins
-          image: "gcr.io/corded-imagery-343815/unocoins:0.0.3"
+          image: "gcr.io/corded-imagery-343815/unocoins:0.0.4"
           imagePullPolicy: IfNotPresent
           env:
             - name: PORT
               value: "3002"
             - name: VERSION
-              value: 0.0.3
+              value: 0.0.4
           envFrom: null
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 3002
           livenessProbe:
             httpGet:
               path: /_healthcheck
-              port: 8080
+              port: 3002
             initialDelaySeconds: 60
             periodSeconds: 10
             successThreshold: 1
@@ -47,7 +47,7 @@ spec:
           readinessProbe:
             httpGet:
               path: /_healthcheck
-              port: 8080
+              port: 3002
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
