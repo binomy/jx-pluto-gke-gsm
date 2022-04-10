@@ -1,0 +1,62 @@
+# Source: unocoins/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unocoins-unocoins
+  labels:
+    draft: draft-app
+    chart: "unocoins-0.0.7"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'unocoins'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx-production
+spec:
+  selector:
+    matchLabels:
+      app: unocoins-unocoins
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: unocoins-unocoins
+    spec:
+      serviceAccountName: unocoins-unocoins
+      containers:
+        - name: unocoins
+          image: "gcr.io/corded-imagery-343815/unocoins:0.0.7"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: PORT
+              value: "3002"
+            - name: VERSION
+              value: 0.0.7
+          envFrom: null
+          ports:
+            - name: http
+              containerPort: 3002
+          livenessProbe:
+            httpGet:
+              path: /_healthcheck
+              port: 3002
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /_healthcheck
+              port: 3002
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
