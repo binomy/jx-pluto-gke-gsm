@@ -12,10 +12,6 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - binomy/stocks-ui
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
       - binomy/unocoins
       require_self_approval: true
     cat: {}
@@ -34,11 +30,6 @@ data:
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
       binomy/origins-cms:
-      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
-        name: cd-indicators
-      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
-        name: lighthouse-webui-plugin
-      binomy/stocks-ui:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -86,22 +77,6 @@ data:
       - cat
       - dog
       - pony
-      binomy/stocks-ui:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
       binomy/unocoins:
       - approve
       - assign
@@ -132,9 +107,6 @@ data:
       trusted_org: todo
     - repos:
       - binomy/origins-cms
-      trusted_org: todo
-    - repos:
-      - binomy/stocks-ui
       trusted_org: todo
     - repos:
       - binomy/unocoins
