@@ -5,7 +5,7 @@ metadata:
   name: unocoins-unocoins
   labels:
     draft: draft-app
-    chart: "unocoins-0.0.11"
+    chart: "unocoins-0.0.12"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'unocoins'
@@ -25,13 +25,18 @@ spec:
       serviceAccountName: unocoins-unocoins
       containers:
         - name: unocoins
-          image: "gcr.io/corded-imagery-343815/unocoins:0.0.11"
+          image: "gcr.io/corded-imagery-343815/unocoins:0.0.12"
           imagePullPolicy: IfNotPresent
           env:
             - name: PORT
               value: "3002"
+            - name: "GOOGLE_APPLICATION_CREDENTIALS"
+              value: "/var/run/secret/cloud.google.com/sa.json"
             - name: VERSION
-              value: 0.0.11
+              value: 0.0.12
+          volumeMounts:
+            - name: "service-account"
+              mountPath: "/var/run/secret/cloud.google.com"
           envFrom: null
           ports:
             - name: http
@@ -60,3 +65,7 @@ spec:
               memory: 128Mi
       terminationGracePeriodSeconds:
       imagePullSecrets:
+      volumes:
+        - name: "service-account"
+          secret:
+            secretName: "unocoins-secrets"
