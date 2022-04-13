@@ -33,5 +33,7 @@ releases:
   version: 0.0.12
   name: unocoins
   namespace: jx-production
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
