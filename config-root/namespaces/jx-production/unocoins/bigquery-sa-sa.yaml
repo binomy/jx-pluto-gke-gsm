@@ -1,0 +1,11 @@
+# Source: unocoins/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: bigquery-sa
+  annotations:
+    iam.gke.io/gcp-service-account: bigquery@corded-imagery-343815.iam.gserviceaccount.com
+    meta.helm.sh/release-name: 'unocoins'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
