@@ -1,0 +1,156 @@
+# Source: unocoins/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unocoins-unocoins
+  labels:
+    draft: draft-app
+    chart: "unocoins-0.0.14"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'unocoins'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx-production
+spec:
+  selector:
+    matchLabels:
+      app: unocoins-unocoins
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: unocoins-unocoins
+    spec:
+      serviceAccountName: bigquery-sa
+      containers:
+        - name: unocoins
+          image: "gcr.io/corded-imagery-343815/unocoins:0.0.14"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: PORT
+              value: "3002"
+            - name: "GOOGLE_APPLICATION_CREDENTIALS"
+              value: "/var/run/secret/cloud.google.com/sa.json"
+            - name: BQ_PROJECT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_PROJECT_ID
+            - name: BQ_YF_DATASET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_YF_DATASET_NAME
+            - name: BQ_IEX_DATASET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_IEX_DATASET_NAME
+            - name: BQ_YF_HISTORICALS_TABLENAME
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_YF_HISTORICALS_TABLENAME
+            - name: BQ_SYMBOLMAP
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_SYMBOLMAP
+            - name: BQ_EXCHANGES_TABLE
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_EXCHANGES_TABLE
+            - name: BQ_IEX_SYMBOLS
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_IEX_SYMBOLS
+            - name: SYMBOLS_DB
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: SYMBOLS_DB
+            - name: EXCHANGES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: EXCHANGES_DB
+            - name: BQ_CRYPTO_DATASET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_CRYPTO_DATASET_NAME
+            - name: BQ_CRYPTO_QUOTES
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_CRYPTO_QUOTES
+            - name: BQ_CRYPTO_SYMBOLS
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: BQ_CRYPTO_SYMBOLS
+            - name: EXCHANGES_API
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: EXCHANGES_API
+            - name: CRYPTO_API
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: CRYPTO_API
+            - name: CRYPTO_METADATA
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: CRYPTO_METADATA
+            - name: CRYPTO_PRICES
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: CRYPTO_PRICES
+            - name: IEX_INFO
+              valueFrom:
+                secretKeyRef:
+                  name: unocoins-secrets
+                  key: IEX_INFO
+            - name: VERSION
+              value: 0.0.14
+          volumeMounts:
+            - name: "service-account"
+              mountPath: "/var/run/secret/cloud.google.com"
+          envFrom: null
+          ports:
+            - name: http
+              containerPort: 3002
+          livenessProbe:
+            httpGet:
+              path: /_healthcheck
+              port: 3002
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /_healthcheck
+              port: 3002
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
+      volumes:
+        - name: "service-account"
+          secret:
+            secretName: "unocoins-secrets"
