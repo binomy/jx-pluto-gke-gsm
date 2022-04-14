@@ -2,8 +2,9 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: unocoins-unocoins
+  name: bigquery-sa
   annotations:
+    iam.gke.io/gcp-service-account: bigquery@corded-imagery-343815.iam.gserviceaccount.com
     meta.helm.sh/release-name: 'unocoins'
   namespace: jx-staging
   labels:
