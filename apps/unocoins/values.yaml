@@ -1,0 +1,4 @@
+jxRequirements:
+  ingress:
+    domain: unocoins
+    namespaceSubDomain: "."
