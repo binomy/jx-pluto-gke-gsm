@@ -5,7 +5,7 @@ metadata:
   name: unocoins-unocoins
   labels:
     draft: draft-app
-    chart: "unocoins-0.0.17"
+    chart: "unocoins-0.0.19"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'unocoins'
@@ -25,7 +25,7 @@ spec:
       serviceAccountName: bigquery-sa
       containers:
         - name: unocoins
-          image: "gcr.io/corded-imagery-343815/unocoins:0.0.17"
+          image: "gcr.io/corded-imagery-343815/unocoins:0.0.19"
           imagePullPolicy: IfNotPresent
           env:
             - name: PORT
@@ -116,7 +116,7 @@ spec:
                   name: unocoins-secrets
                   key: IEX_INFO
             - name: VERSION
-              value: 0.0.17
+              value: 0.0.19
           envFrom: null
           ports:
             - name: http

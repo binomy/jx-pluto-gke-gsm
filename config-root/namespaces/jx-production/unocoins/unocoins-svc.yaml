@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: unocoins
   labels:
-    chart: "unocoins-0.0.17"
+    chart: "unocoins-0.0.19"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'unocoins'
