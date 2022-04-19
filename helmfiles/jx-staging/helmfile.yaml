@@ -30,7 +30,7 @@ releases:
   - acme-values.yaml
   - ../../versionStream/charts/jxgh/acme-jx/values.yaml.gotmpl
 - chart: dev/unocoins
-  version: 0.0.19
+  version: 0.0.20
   name: unocoins
   namespace: jx-staging
   values:
