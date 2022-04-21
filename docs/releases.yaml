@@ -92,17 +92,17 @@
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx-staging/jx-verify
   - apiVersion: v1
-    appVersion: 0.0.25
+    appVersion: 0.0.26
     description: A Helm chart for Kubernetes
-    firstDeployed: "2022-04-21T07:21:24Z"
+    firstDeployed: "2022-04-21T08:39:32Z"
     icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    lastDeployed: "2022-04-21T07:21:24Z"
+    lastDeployed: "2022-04-21T08:39:32Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Forigins-cms&dateRangeUnbound=both
     name: origins-cms
     repositoryName: dev
     repositoryUrl: https://chartmuseum.pluto.binomy.io
     resourcePath: config-root/namespaces/jx-staging/origins-cms
-    version: 0.0.25
+    version: 0.0.26
   - apiVersion: v1
     appVersion: 0.0.24
     description: Acme
