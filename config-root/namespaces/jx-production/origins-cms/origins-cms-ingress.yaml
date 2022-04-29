@@ -3,6 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
+    kubernetes.io/client-max-body-size: 5m
     kubernetes.io/ingress.class: nginx
     meta.helm.sh/release-name: 'origins-cms'
   name: origins-cms

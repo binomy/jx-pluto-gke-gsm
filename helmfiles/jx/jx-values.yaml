@@ -40,6 +40,8 @@ jxRequirements:
     owner: binomy
     repository: jx-pluto-gke-gsm
   - ingress:
+      annotations:
+        kubernetes.io/client-max-body-size: 5m
       domain: staging.binomy.io
       externalDNS: true
       namespaceSubDomain: ""
@@ -50,6 +52,8 @@ jxRequirements:
         secretName: tls-staging-binomy-io-p
     key: staging
   - ingress:
+      annotations:
+        kubernetes.io/client-max-body-size: 5m
       domain: binomy.io
       externalDNS: true
       namespaceSubDomain: ""

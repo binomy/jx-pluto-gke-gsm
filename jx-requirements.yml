@@ -25,6 +25,8 @@ spec:
     owner: binomy
     repository: jx-pluto-gke-gsm
   - ingress:
+      annotations:
+        kubernetes.io/client-max-body-size: 5m
       domain: staging.binomy.io
       externalDNS: true
       namespaceSubDomain: ""
@@ -33,10 +35,10 @@ spec:
         enabled: true
         production: true
         secretName: tls-staging-binomy-io-p
-      annotations:
-        kubernetes.io/client-max-body-size: "5m"
     key: staging
   - ingress:
+      annotations:
+        kubernetes.io/client-max-body-size: 5m
       domain: binomy.io
       externalDNS: true
       namespaceSubDomain: ""
@@ -45,8 +47,6 @@ spec:
         enabled: true
         production: true
         secretName: tls-binomy-io-p
-      annotations:
-        kubernetes.io/client-max-body-size: "5m"
     key: production
   ingress:
     domain: pluto.binomy.io
