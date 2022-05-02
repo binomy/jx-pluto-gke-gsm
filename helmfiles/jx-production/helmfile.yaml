@@ -15,7 +15,7 @@ releases:
   values:
   - jx-values.yaml
 - chart: dev/origins-cms
-  version: 0.0.27
+  version: 0.1.0
   name: origins-cms
   namespace: jx-production
   values:
