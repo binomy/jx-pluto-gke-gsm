@@ -5,7 +5,7 @@ metadata:
   name: origins-cms-origins-cms
   labels:
     draft: draft-app
-    chart: "origins-cms-0.1.1"
+    chart: "origins-cms-0.1.2"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'origins-cms'
@@ -25,7 +25,7 @@ spec:
       serviceAccountName: origins-cms-origins-cms
       containers:
         - name: origins-cms
-          image: "gcr.io/corded-imagery-343815/origins-cms:0.1.1"
+          image: "gcr.io/corded-imagery-343815/origins-cms:0.1.2"
           imagePullPolicy: IfNotPresent
           env:
             - name: SESSION_SECRET
@@ -84,7 +84,7 @@ spec:
                   name: origins-cms-secrets
                   key: MAIL_RECEIVER_EMAIL
             - name: VERSION
-              value: 0.1.1
+              value: 0.1.2
           envFrom: null
           ports:
             - name: http
