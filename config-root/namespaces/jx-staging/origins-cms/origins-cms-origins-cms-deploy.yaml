@@ -5,7 +5,7 @@ metadata:
   name: origins-cms-origins-cms
   labels:
     draft: draft-app
-    chart: "origins-cms-0.1.0"
+    chart: "origins-cms-0.1.1"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'origins-cms'
@@ -25,7 +25,7 @@ spec:
       serviceAccountName: origins-cms-origins-cms
       containers:
         - name: origins-cms
-          image: "gcr.io/corded-imagery-343815/origins-cms:0.1.0"
+          image: "gcr.io/corded-imagery-343815/origins-cms:0.1.1"
           imagePullPolicy: IfNotPresent
           env:
             - name: SESSION_SECRET
@@ -48,18 +48,43 @@ spec:
                 secretKeyRef:
                   name: origins-cms-secrets
                   key: CLOUDINARY_API_KEY
-            - name: CLOUDINARY_API_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: origins-cms-secrets
-                  key: CLOUDINARY_API_SECRET
             - name: CLOUDINARY_API_FOLDER
               valueFrom:
                 secretKeyRef:
                   name: origins-cms-secrets
                   key: CLOUDINARY_API_FOLDER
+            - name: MAIL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: MAIL_PASSWORD
+            - name: MAIL_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: MAIL_HOST
+            - name: MAIL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: MAIL_USER
+            - name: MAIL_SENDER_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: MAIL_SENDER_NAME
+            - name: MAIL_SENDER_EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: MAIL_SENDER_EMAIL
+            - name: MAIL_RECEIVER_EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: origins-cms-secrets
+                  key: MAIL_RECEIVER_EMAIL
             - name: VERSION
-              value: 0.1.0
+              value: 0.1.1
           envFrom: null
           ports:
             - name: http
