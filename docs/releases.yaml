@@ -18,6 +18,7 @@
     - email: james@jetstack.io
       name: munnerz
     name: cert-manager
+    releaseName: cert-manager
     repositoryName: jetstack
     repositoryUrl: https://charts.jetstack.io
     resourcePath: config-root/namespaces/cert-manager/cert-manager
@@ -37,21 +38,23 @@
     lastDeployed: "2022-03-20T10:24:16Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-production%2Fcontainer_name%2Fjx-verify&dateRangeUnbound=both
     name: jx-verify
+    releaseName: jx-verify
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx-production/jx-verify
   - apiVersion: v1
-    appVersion: 0.1.1
+    appVersion: 0.1.3
     description: A Helm chart for Kubernetes
-    firstDeployed: "2022-05-10T15:37:29Z"
+    firstDeployed: "2022-05-21T02:27:47Z"
     icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    lastDeployed: "2022-05-10T15:37:29Z"
+    lastDeployed: "2022-05-21T02:27:47Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-production%2Fcontainer_name%2Forigins-cms&dateRangeUnbound=both
     name: origins-cms
+    releaseName: origins-cms
     repositoryName: dev
     repositoryUrl: https://chartmuseum.pluto.binomy.io
     resourcePath: config-root/namespaces/jx-production/origins-cms
-    version: 0.1.1
+    version: 0.1.3
   - apiVersion: v1
     appVersion: 0.0.24
     description: Acme
@@ -60,6 +63,7 @@
     lastDeployed: "2022-03-21T09:13:12Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-production%2Fcontainer_name%2Facme&dateRangeUnbound=both
     name: acme
+    releaseName: acme-jx
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     version: 0.0.24
@@ -71,6 +75,7 @@
     lastDeployed: "2022-04-28T10:33:29Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-production%2Fcontainer_name%2Funocoins&dateRangeUnbound=both
     name: unocoins
+    releaseName: unocoins
     repositoryName: dev
     repositoryUrl: https://chartmuseum.pluto.binomy.io
     resourcePath: config-root/namespaces/jx-production/unocoins
@@ -88,6 +93,7 @@
     lastDeployed: "2022-03-20T10:24:30Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Fjx-verify&dateRangeUnbound=both
     name: jx-verify
+    releaseName: jx-verify
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx-staging/jx-verify
@@ -99,6 +105,7 @@
     lastDeployed: "2022-05-21T01:52:15Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Forigins-cms&dateRangeUnbound=both
     name: origins-cms
+    releaseName: origins-cms
     repositoryName: dev
     repositoryUrl: https://chartmuseum.pluto.binomy.io
     resourcePath: config-root/namespaces/jx-staging/origins-cms
@@ -111,6 +118,7 @@
     lastDeployed: "2022-03-21T09:13:21Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Facme&dateRangeUnbound=both
     name: acme
+    releaseName: acme-jx
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     version: 0.0.24
@@ -122,6 +130,7 @@
     lastDeployed: "2022-04-28T09:21:53Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Funocoins&dateRangeUnbound=both
     name: unocoins
+    releaseName: unocoins
     repositoryName: dev
     repositoryUrl: https://chartmuseum.pluto.binomy.io
     resourcePath: config-root/namespaces/jx-staging/unocoins
@@ -154,6 +163,7 @@
     - email: containers@bitnami.com
       name: Bitnami
     name: external-dns
+    releaseName: external-dns
     repositoryName: bitnami
     repositoryUrl: https://charts.bitnami.com/bitnami
     resourcePath: config-root/namespaces/jx/external-dns
@@ -170,6 +180,7 @@
     lastDeployed: "2022-03-20T10:25:40Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx%2Fcontainer_name%2Facme&dateRangeUnbound=both
     name: acme
+    releaseName: acme-jx
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     version: 0.0.24
@@ -182,6 +193,7 @@
     lastDeployed: "2022-03-20T10:25:45Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx%2Fcontainer_name%2Fjxboot-helmfile-resources&dateRangeUnbound=both
     name: jxboot-helmfile-resources
+    releaseName: jxboot-helmfile-resources
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/jxboot-helmfile-resources
@@ -196,6 +208,7 @@
     lastDeployed: "2022-03-20T10:25:50Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx%2Fcontainer_name%2Fjx-pipelines-visualizer&dateRangeUnbound=both
     name: jx-pipelines-visualizer
+    releaseName: jx-pipelines-visualizer
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/jx-pipelines-visualizer
@@ -210,6 +223,7 @@
     lastDeployed: "2022-03-20T10:25:55Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx%2Fcontainer_name%2Fjx-preview&dateRangeUnbound=both
     name: jx-preview
+    releaseName: jx-preview
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/jx-preview
@@ -222,6 +236,7 @@
     lastDeployed: "2022-03-20T10:26:00Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx%2Fcontainer_name%2Flighthouse&dateRangeUnbound=both
     name: lighthouse
+    releaseName: lighthouse
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/lighthouse
@@ -235,6 +250,7 @@
     lastDeployed: "2022-03-20T10:26:04Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx%2Fcontainer_name%2Fnexus&dateRangeUnbound=both
     name: nexus
+    releaseName: nexus
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/nexus
@@ -253,6 +269,7 @@
     lastDeployed: "2022-03-20T10:26:13Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fjx%2Fcontainer_name%2Fchartmuseum&dateRangeUnbound=both
     name: chartmuseum
+    releaseName: chartmuseum
     repositoryName: stable
     repositoryUrl: https://charts.helm.sh/stable
     resourcePath: config-root/namespaces/jx/chartmuseum
@@ -269,6 +286,7 @@
     - email: jenkins-x@googlegroups.com
       name: Jenkins X Team
     name: jx-build-controller
+    releaseName: jx-build-controller
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/jx-build-controller
@@ -287,6 +305,7 @@
     - email: jenkins-x@googlegroups.com
       name: Jenkins X Team
     name: jx-kh-check
+    releaseName: health-checks-jx
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/jx-kh-check-health-checks-jx
@@ -308,6 +327,7 @@
     - email: jenkins-x@googlegroups.com
       name: Jenkins X Team
     name: kh-tls-check
+    releaseName: kh-tls-check
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/kuberhealthy/kh-tls-check
@@ -336,6 +356,7 @@
     maintainers:
     - name: ChiefAlexander
     name: ingress-nginx
+    releaseName: nginx-ingress
     repositoryName: ingress-nginx
     repositoryUrl: https://kubernetes.github.io/ingress-nginx
     resourcePath: config-root/namespaces/nginx/ingress-nginx-nginx-ingress
@@ -360,6 +381,7 @@
     - name: external-secrets
       url: https://github.com/external-secrets
     name: kubernetes-external-secrets
+    releaseName: kubernetes-external-secrets
     repositoryName: external-secrets
     repositoryUrl: https://external-secrets.github.io/kubernetes-external-secrets
     resourcePath: config-root/namespaces/secret-infra/kubernetes-external-secrets
@@ -377,6 +399,7 @@
     lastDeployed: "2022-03-20T10:27:00Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Fsecret-infra%2Fcontainer_name%2Fpusher-wave&dateRangeUnbound=both
     name: pusher-wave
+    releaseName: pusher-wave
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/secret-infra/pusher-wave
@@ -395,6 +418,7 @@
     lastDeployed: "2022-03-20T10:27:11Z"
     logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=corded-imagery-343815&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fpluto%2Fnamespace_name%2Ftekton-pipelines%2Fcontainer_name%2Ftekton-pipeline&dateRangeUnbound=both
     name: tekton-pipeline
+    releaseName: tekton-pipeline
     repositoryName: cdf
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
